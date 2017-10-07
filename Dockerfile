@@ -21,7 +21,7 @@ RUN sed -i 's/snap7//g' ./Makefile
 RUN sed -i 's/nrpe//g' ./Makefile
 RUN /bin/bash -c 'make EDITION=$EDITION'
 RUN /bin/bash -c 'make pack EDITION=$EDITION'
-RUN /bin/bash -c 'cd /; tar -xzf /tmp/${CMK}/check-mk-$EDITION-bin-$CMKVER.tar.gz'
+RUN /bin/bash -c 'cd /; tar -xzf /tmp/$CMK.$EDITION/check-mk-$EDITION-bin-$CMKVER.$EDITION.tar.gz'
 RUN useradd -d /opt/omd omd;
 
 #RUN site='test01'; \
